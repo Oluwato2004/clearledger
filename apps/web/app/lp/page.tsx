@@ -262,6 +262,12 @@ export default function LPDashboard() {
             <h2 className="text-sm font-bold uppercase tracking-wider text-white">
               Deposit USDC
             </h2>
+            <aside className="rounded border border-amber-500/20 bg-amber-500/5 p-3 text-xs text-amber-200/80">
+              <p className="font-semibold text-amber-200">Before depositing on Testnet</p>
+              <p className="mt-1">
+                Switch your wallet to Stellar Testnet, add a trustline for the configured USDC asset, and keep test XLM for transaction fees and the account reserve. You can get test XLM from the Stellar Testnet Friendbot.
+              </p>
+            </aside>
             <label
               htmlFor="deposit-amount"
               className="block text-sm text-slate-300"
