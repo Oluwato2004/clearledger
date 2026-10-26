@@ -12,6 +12,7 @@ import { InvoiceStatus } from "@/components/invoice/InvoiceStatus";
 import { InvoiceStatusTimeline } from "@/components/invoice/InvoiceStatusTimeline";
 import { DeliveryConfirmationStatus } from "@/components/invoice/DeliveryConfirmationStatus";
 import { AttestationStatus } from "@/components/invoice/AttestationStatus";
+import { RepaymentBreakdown } from "@/components/invoice/RepaymentBreakdown";
 import { Button } from "@/components/ui/button";
 import { TransactionPending } from "@/components/shared/TransactionPending";
 import {
@@ -301,6 +302,8 @@ export default function InvoiceDetailClient({
                 </div>
               </div>
             </div>
+
+            <RepaymentBreakdown invoice={invoice} />
 
             <div className="bg-card border border-border rounded-lg p-5 space-y-4">
               <h3 className="text-xs font-bold font-mono text-white uppercase tracking-wider border-b border-border/40 pb-2 flex items-center gap-1.5">
