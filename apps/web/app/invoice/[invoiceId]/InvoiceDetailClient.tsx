@@ -10,6 +10,7 @@ import { useInvoiceDetailActions } from "@/hooks/useInvoiceDetailActions";
 import { useWalletStore } from "@/store/wallet";
 import { InvoiceStatus } from "@/components/invoice/InvoiceStatus";
 import { InvoiceStatusTimeline } from "@/components/invoice/InvoiceStatusTimeline";
+import { InvoiceEventTimeline } from "@/components/invoice/InvoiceEventTimeline";
 import { DeliveryConfirmationStatus } from "@/components/invoice/DeliveryConfirmationStatus";
 import { AttestationStatus } from "@/components/invoice/AttestationStatus";
 import { RepaymentBreakdown } from "@/components/invoice/RepaymentBreakdown";
@@ -240,6 +241,14 @@ export default function InvoiceDetailClient({
             Soroban Transaction Progress
           </h3>
           <InvoiceStatusTimeline invoice={invoice} />
+        </div>
+
+        <div className="bg-card border border-border rounded-lg p-5 space-y-4">
+          <h3 className="text-xs font-bold font-mono text-white uppercase tracking-wider flex items-center gap-1.5">
+            <Activity className="w-3.5 h-3.5 text-primary" />
+            Indexed Ledger Events (UTC)
+          </h3>
+          <InvoiceEventTimeline invoiceId={invoice.id} />
         </div>
 
         <div className="bg-card border border-border rounded-lg p-5 space-y-4">

@@ -22,6 +22,10 @@ vi.mock("@/components/shared/PageLayout", () => ({
   ),
 }));
 
+vi.mock("@/components/invoice/InvoiceEventTimeline", () => ({
+  InvoiceEventTimeline: () => null,
+}));
+
 vi.mock("@/hooks/useInvoices", () => ({
   useInvoice: vi.fn(),
   useInvoiceActions: vi.fn(),
